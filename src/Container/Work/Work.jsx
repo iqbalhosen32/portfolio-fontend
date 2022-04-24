@@ -12,6 +12,8 @@ const Work = () => {
     const [activeFilter, setActiveFilter] = useState('All');
     const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
+    // console.log(`${process.env.REACT_APP_SANITY_PROJECT_ID}`)
+
     useEffect(() => {
         const query = '*[_type == "works"]';
         client.fetch(query)
