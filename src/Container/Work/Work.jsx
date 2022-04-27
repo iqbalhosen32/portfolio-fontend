@@ -3,7 +3,7 @@ import './Work.scss';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 
-import { AppWrapper } from '../../Wrapper';
+import { AppWrapper, MotionWrap } from '../../Wrapper';
 import { urlFor, client } from '../../client'
 
 const Work = () => {
@@ -111,4 +111,8 @@ const Work = () => {
     );
 };
 
-export default AppWrapper(Work, 'work');
+export default AppWrapper(
+    MotionWrap(Work, 'app__work'),
+    'work',
+    'app__secondarybg'
+);
